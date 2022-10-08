@@ -1,0 +1,20 @@
+---
+- name: Deploy Nginx
+  hosts: all
+  become: yes
+  become_user: root
+    
+  tasks:
+
+    - name: fix dpkg log issue
+      ansible.builtin.command: sudo dpkg --configure -a
+
+    - name: Ensure nginx is at the latest version
+      apt:
+          name: nginx
+          state: latest
+        
+    - name: Ensure nginx is running
+      service:
+          name: nginx
+          state: started    

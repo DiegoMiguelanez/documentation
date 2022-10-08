@@ -1,0 +1,14 @@
+---
+- hosts: all
+  remote_user: vagrant
+
+  tasks:
+  - name: "Test ping"
+    ping:
+
+  - name: "Print IP"
+    shell: echo $(ip a | grep 192.168.1.*)
+    register: get_ip
+  
+  - name: "Salida echo"
+    debug: msg="{{ get_ip.stdout }}"
