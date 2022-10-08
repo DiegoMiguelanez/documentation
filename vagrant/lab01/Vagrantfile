@@ -1,1 +1,5 @@
-/home/dbartus/demoProjects/vagrant4/Vagrantfile
+Vagrant.configure("2") do |config|
+  config.vm.box = "bento/ubuntu-18.04"
+  config.vm.hostname = "white"
+  config.vm.network "private_network", ip: "172.16.1.1"
+end
