@@ -3,10 +3,17 @@ Vagrant.configure("2") do |config|
   config.vm.hostname = "white"
   config.vm.network "private_network", ip: "172.16.1.1"
 
+  #------SHARED FOLDER------
   #Typical custom shared directory kinda VBox
   config.vm.synced_folder "~/Documents/wordpress", "/home/vagrant/wordpress"
 
-  #Copy command
+  #------COPY FILE----------
   #To copy a file kind of nginx index file to a specific location inside Vagrant VM
   config.vm.provision "file", source: "/home/dbartus/demoProjects/vagrant4/index.html", destination: "/home/vagrant/index.html"
+
+  #------CPU/MEMORY---------
+  config.vm.provider :virtualbox do |vb|
+    vb.customize ["modifyvm", :id, "--memory", 1024]
+    vb.customize ["modifyvm", :id, "--cpus", 1]
+  end
 end
