@@ -1,0 +1,4 @@
+Finish local full infrastructure lab with:
+    - Vagrant: Infrastructure VM provisioning
+    - Ansible: VM configuration
+    - Proxy: Nginx reverse proxy
