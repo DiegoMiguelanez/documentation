@@ -1,0 +1,35 @@
+- hosts: webservers
+  become: yes
+  vars:
+    http_port: 8000
+    https_port: 4443
+    html_welcome_msg: "Testing acest webserver!"
+  tasks:
+    - name: ensure apache is at the latest version
+      apt:
+        name: apache2
+        state: latest
+
+    - name: Write the apache2 ports.conf 
+      template:
+        src: templates/ports.conf.j2
+        dest: /etc/apache2/ports.conf
+      #After we applyed new conf we restart apache2 with notify
+      notify:
+        - restart apache
+
+    - name: Write the apache2 index.html
+      template:
+        src: templates/index.html.j2
+        dest: /var/www/html/index.html
+
+      #After we applyed new conf we restart apache2 with notify
+      notify:
+        - restart apache
+
+  #We need handler referencing notify "restart apache" to apply module service and restart Apache service
+  handlers:
+    - name: restart apache
+      service:
+          name: apache2 
+          state: restarted
