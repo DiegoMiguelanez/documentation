@@ -22,3 +22,9 @@ After configuring ssh access to all inventory hosts from Master bootstrap we ins
     4: name=mysql state=started
        Start service mysql in group database (Green color, it was already started, yellow color, it had to start it)
        #ansible database -i hosts --become -m service -a "name=mysql state=started"
+
+
+#ROLES
+#------
+    1. We create new directory tree for our role Apache2 for its own tasks, handlers, templates... 
+    #ansible-galaxy init roles/apache2
