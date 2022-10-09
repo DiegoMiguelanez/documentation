@@ -1,0 +1,5 @@
+- name: Utilizar custom hosts file para resolucion de nombres entre los nodos
+  template:
+    src: hosts.j2
+    dest: /etc/hosts
+  tags: always

@@ -40,3 +40,8 @@ ansible-playbook -i hosts -K playbook1.yml --tags proxy
 
 #This option doesnt filter configuration tagged inside web, instead runs all web items and tagged configuration tasks from other groups
 --tags web,configuration
+
+#VARIABLES
+#---------
+Guardamos toda la informacion de entorno del grupo proxy que ansible puede recolectar
+#ansible -i hosts proxy -m setup >> ansible_facts.json

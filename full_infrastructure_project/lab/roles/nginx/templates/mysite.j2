@@ -1,6 +1,15 @@
+#Configuracion modificada por test variables para {{ ansible_facts['nodename'] }}    
     upstream webservers {
-        server 192.168.7.11:8000;
-        server 192.168.7.12:8000;
+        #Bucle for
+        {% for host in groups['webservers'] %}
+            server {{ hostvars[host]['ansible_facts']['nodename'] }}:{{ http_port }}; 
+        {% endfor %}
+        
+        #Versiones antiguas
+        #server {{ hostvars['web1']['ansible_facts']['nodename'] }}:8000;
+        #server {{ hostvars['web2']['ansible_facts']['nodename'] }}:8000;
+        #server 192 .168.7.11:8000;
+        #server 192.168.7.12:8000;
     }
 
     server {

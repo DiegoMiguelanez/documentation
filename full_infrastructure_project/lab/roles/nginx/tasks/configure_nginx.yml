@@ -1,7 +1,7 @@
 - name: Deploy nginx sites configuration
   template: 
     src: mysite.j2 
-    dest: "/etc/nginx/sites-enabled/mysite"
+    dest: /etc/nginx/sites-enabled/mysite
   notify: restart nginx
   tags: configuration
   
@@ -9,6 +9,6 @@
 - name: Remove defaults
   file: 
     state: absent
-    path: "/etc/nginx/sites-enabled/default"
+    path: /etc/nginx/sites-enabled/default
   notify: restart nginx
   tags: configuration
