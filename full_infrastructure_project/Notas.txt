@@ -1,0 +1,3 @@
+After configuring ssh access to all inventory hosts from Master bootstrap we install package python-simplejson in every single one of them:
+
+    $ ansible all -i hosts -m command -a 'sudo apt-get -y install python-simplejson'

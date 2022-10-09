@@ -1,0 +1,17 @@
+[control]
+master
+
+[proxy]
+loadbalancer
+
+[webservers]
+web1
+web2
+
+[database]
+db1
+
+[webstack:children]
+proxy
+webservers
+database
