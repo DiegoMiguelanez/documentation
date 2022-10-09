@@ -4,13 +4,16 @@
     http_port: 8000
     https_port: 4443
     html_welcome_msg: "Testing acest webserver!"
-  
   roles:
     - common
     - apache2
+  tags:
+    web
 
 - hosts: proxy
   become: yes
   roles: 
     - common
     - nginx
+  tags:
+    proxy

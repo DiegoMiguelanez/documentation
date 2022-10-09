@@ -28,3 +28,15 @@ After configuring ssh access to all inventory hosts from Master bootstrap we ins
 #------
     1. We create new directory tree for our role Apache2 for its own tasks, handlers, templates... 
     #ansible-galaxy init roles/apache2
+
+#TAGS
+#------
+#No matter what tag whe choose if we use tag always it will always run
+tags: always
+
+--list-tags
+
+ansible-playbook -i hosts -K playbook1.yml --tags proxy
+
+#This option doesnt filter configuration tagged inside web, instead runs all web items and tagged configuration tasks from other groups
+--tags web,configuration

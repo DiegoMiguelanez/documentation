@@ -2,6 +2,7 @@
   apt:
     name: apache2
     state: latest
+  tags: installation
 
 - name: Write the apache2 ports.conf 
   template:
@@ -10,6 +11,7 @@
   #After we applyed new conf we restart apache2 with notify
   notify:
     - restart apache
+  tags: configuration
 
 - name: Write the apache2 index.html
   template:
@@ -18,8 +20,10 @@
   #After we applyed new conf we restart apache2 with notify
   notify:
     - restart apache
+  tags: configuration
 
 - name: ensure apache is running
   service:
     name: apache2
     state: started
+  tags: always
