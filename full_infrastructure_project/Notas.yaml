@@ -1,0 +1,24 @@
+After configuring ssh access to all inventory hosts from Master bootstrap we install package python-simplejson in every single one of them:
+
+    $ ansible all -i hosts -m command -a 'sudo apt-get -y install python-simplejson'
+
+#AD-HOC Commands
+#---------------------------
+- Doc for apt module: https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_module.html
+
+    1:update_cache 
+      Run the equivalent of apt-get update before the operation. Can be run as part of the package installation or as a separate step.
+       Choices: no, yes
+       #ansible all -i hosts --become -m apt -a "update_cache=yes"
+
+    2: name=apache2 state=present
+       Install apache2 package in webservers group
+       #ansible webservers -i hosts --become -m apt -a "name=apache2 state=present"
+      
+    3: name=apache2 state=present
+       Install mysql-server in group database
+       #ansible database -i hosts --become -m apt -a "name=mysql-server state=present"
+
+    4: name=mysql state=started
+       Start service mysql in group database (Green color, it was already started, yellow color, it had to start it)
+       #ansible database -i hosts --become -m service -a "name=mysql state=started"
