@@ -1,0 +1,35 @@
+<bootstrap> (1, b'\r\n\r\n{"msg": "Failed to import the required Python library (setuptools) on bootstrap\'s Python /usr/bin/python. Please read the module documentation and install it in the appropriate location. If the required library is installed, but Ansible is using the wrong Python interpreter, please consult the documentation on ansible_python_interpreter", "failed": true, "exception": "Traceback (most recent call last):\\n  File \\"/tmp/ansible_pip_payload_py8VGz/ansible_pip_payload.zip/ansible/modules/pip.py\\", line 270, in <module>\\nImportError: No module named pkg_resources\\n", "invocation": {"module_args": {"virtualenv": null, "extra_args": null, "virtualenv_command": "/usr/bin/python3.6 -m venv", "chdir": null, "requirements": null, "name": ["docker"], "virtualenv_python": null, "umask": null, "editable": false, "executable": null, "virtualenv_site_packages": false, "state": "present", "version": null}}}\r\n', b'Shared connection to bootstrap closed.\r\n')
+<bootstrap> Failed to connect to the host via ssh: Shared connection to bootstrap closed.
+<bootstrap> ESTABLISH SSH CONNECTION FOR USER: None
+<bootstrap> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o ControlPath=/home/vagrant/.ansible/cp/6673c50dde bootstrap '/bin/sh -c '"'"'rm -f -r /home/vagrant/.ansible/tmp/ansible-tmp-1665664957.0318377-21938-35569621518375/ > /dev/null 2>&1 && sleep 0'"'"''
+<bootstrap> (0, b'', b'')
+The full traceback is:
+Traceback (most recent call last):
+  File "/tmp/ansible_pip_payload_py8VGz/ansible_pip_payload.zip/ansible/modules/pip.py", line 270, in <module>
+ImportError: No module named pkg_resources
+fatal: [bootstrap]: FAILED! => {
+    "changed": false,
+    "invocation": {
+        "module_args": {
+            "chdir": null,
+            "editable": false,
+            "executable": null,
+            "extra_args": null,
+            "name": [
+                "docker"
+            ],
+            "requirements": null,
+            "state": "present",
+            "umask": null,
+            "version": null,
+            "virtualenv": null,
+            "virtualenv_command": "/usr/bin/python3.6 -m venv",
+            "virtualenv_python": null,
+            "virtualenv_site_packages": false
+        }
+    },
+    "msg": "Failed to import the required Python library (setuptools) on bootstrap's Python /usr/bin/python. Please read the module documentation and install it in the appropriate location. If the required library is installed, but Ansible is using the wrong Python interpreter, please consult the documentation on ansible_python_interpreter"
+}
+
+PLAY RECAP ********************************************************************************************************************************************************************************************************
+bootstrap                  : ok=6    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
