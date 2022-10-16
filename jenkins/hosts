@@ -1,0 +1,5 @@
+[master]
+bootstrap
+
+[clients]
+client1
