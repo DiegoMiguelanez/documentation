@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "rick-and-morty-api-365723",
+  "private_key_id": "8ee42da8319b4c7c88cec08393b22900bec12104",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCqwVaakUWZdLH4\nVinFVkoereHkxQkLfgJu7j7npWsS0v4hVdxxTsFxt3tV1dtqfskm78YjF63BPFzX\n4GhlhkUGSc0q5LMV/9f+8m1l8oJad2o2azw1R6fjHqswFJifhYDRw/8IDnC/J4M7\nOxjRE6+0e8yrmHTn7PlfJiY6rzw1/XjW+pS6/KkbcThMhSu9gaef9KbPJAXtQTQT\nyKb/jEzQrVVwaSwKzAPod93X4CluR3+nmmEnA8ROe5+u13hjRFELy1rUd3M+Q6Ra\n6Gl5gxHEwGGdMV1coXPepOGHo3sV53UfCTX8C2TPjEcgMIM7Zs8Re9CUYLN23/YL\nv7EfLMtZAgMBAAECggEAFp0UslMnX7+J2zzT+tem6MG37xNeE4jMWzMPnx9z2vIY\n6ELF9zaKHVyCh7dS/9tLGe46tAaMgxESrZ9BTCK4TPEkq/fONM1lZlTmQpBXjZIP\nfaX9ewPimsxCuRMdNFEaoo0dnwxEh7g8o7E7o+LCy/jyPc5quxVR4DU97lsrMu4H\ne/cj/U1MuzkUbUftXInC0P0ojGg1koA+VBj+vwzIQcQno3q0nQ9sRRnInzq2zcPU\n2KLAT3lqsLxqTIWwqVPngT1WKRQERSk/i2ZRA9ZrVPnnINRcPY/Piym3iVkOibwy\ny7R5DrLe0+imsDge6EpcjVXoxgr4Kzt6E1mLmx6odQKBgQDSbEsud47qt7p97UU0\niqXp/pLrt+aTtquggesl5QuhXc5mfGaJFEmWEVeMICBz4VKhaK9AML51OtNvFTwE\nuHwn6oKLjeLKKI1Dy8cAM7aF7ipGwOUcm5WCKMuMc9F17r20YR+K22WF5zXL0LWA\nDO/1MkCYYNddTIn6yz/oc5Wa1QKBgQDPvYM5RP2lAgH3ivHQDxlCGGW710sS4Isn\nntVzANcvpY/Kw/Omadf+WJxKSNP23ot6GggDkgBBN3nwjVZeHNbtnGdkaHzzUfEk\nI+sAbQXUQq5RWMydquqB/TDzW0GNyk+tDm2M6z+KzqmY9vwHrMGzbQ4LMyNz0Tmp\n95MzX4zodQKBgGUWWVfNX/8qnJD6d5CyOtqazgInqsGzs+e8AjeGPXwcEJfzk16v\nPFq3ohNTK8P/ry6Tl/2CbTzsMb7fuKGb7ylN48EfPKBZsuOq9cMHFNxqeizbZjXE\nGKMa7g5fZXT+aGxLbFfM5ozZcmKjtU366RwmNBoAC/ZqWq79DYqiXHCxAoGAZfNo\nyhtcq7Vfh7/tyqEOUUyt6NDQ7DO8tzYRJP59nMmQ1v7xvXLmaNHN6frx4472Pnc2\nBaKKc3cpZe/HOirHJBeE+lb5M2S8hnMGKtBWcwRCjnOY/6vYqPC8LEJV2qM2FQUm\nqGjvZ0zjGMnliFK1QTw9DywKsxU0SoDRAf5bpd0CgYEAvX+XVpvP/XE5vD1zppK/\nqtTvvpuDSlyCaakN/NfjhkL6L38BeDVPJ8+gCGGNDQFgFUw6QVD37QEzl9EN5EF9\nDmrWX7xbAnlsNxflDSzaKqs0vZ40Qhv8mldCBfWgGYLidDFJT6ry8k0V1GGa7WJU\nRKK7DxG9YBW1l/6ttx28l6A=\n-----END PRIVATE KEY-----\n",
+  "client_email": "dbartus@rick-and-morty-api-365723.iam.gserviceaccount.com",
+  "client_id": "100909156283612856922",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/dbartus%40rick-and-morty-api-365723.iam.gserviceaccount.com"
+}
