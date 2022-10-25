@@ -1,0 +1,11 @@
+[control]
+master
+
+[dns]
+dns
+
+[web]
+web
+
+[monitoring]
+monitoring

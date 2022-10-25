@@ -1,0 +1,7 @@
+
+zone "cluster2" {
+type master;
+file "/etc/bind/db.cluster2";
+};
+
+
