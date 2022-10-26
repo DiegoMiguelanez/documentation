@@ -7,6 +7,11 @@
 #    - dns
 #docker pull alpine
 - hosts: cluster2
+  vars:
+      container_count: 4
+      default_container_name: alpine
+      default_container_image: alpine
+      default_container_command: sleep 1d
   become: true
   roles:  
     - common

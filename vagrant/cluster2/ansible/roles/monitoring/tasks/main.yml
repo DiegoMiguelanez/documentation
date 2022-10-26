@@ -1,2 +1,3 @@
 ---
 # tasks file for monitoring
+- include: install-prometheus.yml

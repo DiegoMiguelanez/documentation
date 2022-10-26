@@ -1,0 +1,9 @@
+- name: delete node_exporter tmp tar
+  become: true
+  file:
+    state: absent
+    path: "{{ item }}" 
+  with_items: 
+    - /tmp/node_exporter.tar.gz
+    - /bin/node_exporter
+    - /tmp/node_exporter-1.4.0.linux-arm64/

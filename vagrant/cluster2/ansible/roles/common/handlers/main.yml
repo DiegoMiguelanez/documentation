@@ -1,2 +1,6 @@
----
 # handlers file for common
+---
+- name: restart node_exporter
+  become: true
+  shell:
+    cmd: /bin/node_exporter

@@ -1,0 +1,15 @@
+#prom/prometheus
+- name: Pull default Docker image
+  community.docker.docker_image:
+    name: prom/prometheus
+    source: pull
+
+- name: Create default containers
+  community.docker.docker_container:
+    name: prometheus
+    image: prom/prometheus
+    exposed_ports: 
+    published_ports: 9090:9090
+    state: started
+    #command: "{{ default_container_command }}"
+    

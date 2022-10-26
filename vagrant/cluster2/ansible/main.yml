@@ -1,0 +1,28 @@
+
+---
+
+#- hosts: dns
+#  become: true
+#  roles:
+#    - dns
+#docker pull alpine
+- hosts: cluster2
+  vars:
+       node_exporter_url: https://github.com/prometheus/node_exporter/releases/download/v1.4.0/node_exporter-1.4.0.darwin-amd64.tar.gz
+#      container_count: 1
+#      default_container_name: alpine
+#      default_container_image: alpine
+#      default_container_command: sleep 1d
+  become: true
+  roles:  
+    - common
+
+#- hosts: monitoring
+#  become: true
+#  roles:
+#    - monitoring
+
+#- hosts: web
+#  become: true
+#  roles:
+#    - web

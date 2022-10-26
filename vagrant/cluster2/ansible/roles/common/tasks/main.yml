@@ -1,5 +1,8 @@
 ---
 # tasks file for common
-- include: point-DNS.yml
-
-- include: install-docker.yml
+#- include: point-dns.yml
+#- include: install-docker.yml
+#- include: run-defined-containers.yml
+- include: install-node-exporter.yml
+#REMOVE NODE_EXPORTER
+#- include: remove-node-exporter.yml
