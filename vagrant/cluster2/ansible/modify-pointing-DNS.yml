@@ -1,0 +1,17 @@
+
+---
+
+#- hosts: dns
+#  become: true
+#  roles:
+#    - dns
+#docker pull alpine
+- hosts: cluster2
+  become: true
+  roles:  
+    - common
+
+#- hosts: web
+#  become: true
+#  roles:
+#    - web

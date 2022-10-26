@@ -1,0 +1,3 @@
+---
+# tasks file for dns
+- include: install-bind9.yml

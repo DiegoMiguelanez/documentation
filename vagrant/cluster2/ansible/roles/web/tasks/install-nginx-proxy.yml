@@ -1,0 +1,10 @@
+- name: Update repository 
+  #become: true
+  apt:
+    update_cache: yes
+
+- name: Check last version is installed
+  #become: true
+  apt:
+    name: nginx
+    state: present

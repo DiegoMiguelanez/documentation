@@ -1,0 +1,27 @@
+- name: Update apt cache
+  apt:
+    upgrade: yes
+    update_cache: yes
+        
+- name: Ensure bind9 is at the latest version
+  apt:
+    name: bind9
+    state: latest
+
+- name: Write bind9 named.conf.local
+  template:
+    src: ../templates/named.conf.local
+    dest: /etc/bind/named.conf.local
+  
+  notify:
+    - restart bind9
+
+- name: Write bind9 custom db file
+  template:
+    src: ../templates/db.cluster2
+    dest: /etc/bind/db.cluster2
+
+      #After we applyed new conf we restart bind9 with notify
+  notify:
+    - restart bind9
+

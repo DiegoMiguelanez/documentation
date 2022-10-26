@@ -14,7 +14,7 @@ Vagrant.configure("2") do |config|
       },
       {
         :hostname => "web",
-        :box => "generic/fedora28",
+        :box => "bento/ubuntu-18.04",
         :ip => "192.168.10.123",
         :ssh_port => '2212'
       }
